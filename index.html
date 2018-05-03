@@ -1,0 +1,65 @@
+<!--2. Link Vue Javascript-->
+<script src='https://unpkg.com/vue/dist/vue.js'></script>
+<!--3. Link VCalendar Javascript (Plugin automatically installed)-->
+<script src='https://unpkg.com/v-calendar'></script>
+<!--4. Create the Vue instance-->
+<html>
+
+<head>
+    <link rel='stylesheet' href='https://unpkg.com/v-calendar/lib/v-calendar.min.css'>
+</head>
+
+<body>
+   <div class='app'>
+        
+        <div class="input-group" id = "demo1">
+                        <v-date-picker :mode='mode' v-model='selectedDate'></v-date-picker>
+                        <div id='button-holder'>
+                                <img src="datepicker-dark.png"></img>
+                            </div>
+                    </div>              
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '.app',
+            data: {
+                // Data used by the date picker
+                mode: 'single',
+                selectedDate: '',
+            }
+        })
+    </script>
+    <style>
+    	
+#demo1{  
+    float:left;
+    height:20px;
+    margin:.9em 0 0 .5em; 
+    outline:0;
+    padding:.2em 0 .2em .2em; 
+     width:183px;  
+}
+  
+#button-holder{ 
+    cursor:pointer;
+    float:left;
+    height:10px;
+    margin:1px 10 10 0;
+    text-align:center;
+    margin-left: 9.5em;
+    margin-top: -2.0em;
+    width:50px;
+
+}
+  
+#button-holder img{
+    margin:7px;
+    width:30px;
+}  
+    </style>
+
+</body>
+
+</html>
